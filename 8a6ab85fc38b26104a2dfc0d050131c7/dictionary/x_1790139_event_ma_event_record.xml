@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="53f1899bc3cb26104a2dfc0d0501314c" extends="task" label="Event" max_length="40" name="x_1790139_event_ma_event_record" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="x_email" type="string"/>
+        <element attributes="encode_utf8=false" label="Assigned Planner" max_length="32" name="x_assigned_planner" reference="sys_user" type="reference"/>
+        <element label="IsFinished" max_length="40" name="x_is_finished" type="boolean"/>
+        <element label="Isvip" max_length="40" name="x_is_vip" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="planned" label="Status" max_length="40" name="x_status" type="string">
             <choice>
                 <element inactive_on_update="false" label="Planned" sequence="1" value="planned"/>

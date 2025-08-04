@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1790139_event_ma.VendorUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>VendorUtils</name>
+        <script><![CDATA[var VendorUtils = Class.create();
+VendorUtils.prototype = {
+    initialize: function() {
+    },
+	
+	getVendorById: function(vendorId) {
+        var vendorGR = new GlideRecord('x_1790139_event_ma_vendor');
+        if (vendorGR.get(vendorId)) {
+            return {
+                sys_id: vendorGR.getUniqueValue(),
+                name: vendorGR.getDisplayValue('x_vendor_name'),
+                contact_number: vendorGR.getValue('x_contact_number'),
+            };
+        }
+        return null;
+    },
+
+    isVendorAvailable: function(vendorId) {
+        var vendorGR = new GlideRecord('x_1790139_event_ma_vendor');
+        if (vendorGR.get(vendorId)) {
+            return vendorGR.getValue('x_is_available') == 'true';
+        }
+        return false;
+    },
+
+
+    getVendorsByEvent: function(eventId) {
+        var vendors = [];
+        var vendorGR = new GlideRecord('x_1790139_event_ma_vendor');
+        vendorGR.addQuery('x_event_id', eventId);
+        vendorGR.query();
+        while (vendorGR.next()) {
+            vendors.push({
+                sys_id: vendorGR.getUniqueValue(),
+                name: vendorGR.getDisplayValue('x_vendor_name'),
+                available: vendorGR.getValue('x_is_available') == 'true'
+            });
+        }
+        return vendors;
+    },
+
+
+    type: 'VendorUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 11:47:12</sys_created_on>
+        <sys_id>04fff1d7c30366104a2dfc0d05013187</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>VendorUtils</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sys_script_include_04fff1d7c30366104a2dfc0d05013187</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 11:47:12</sys_updated_on>
+    </sys_script_include>
+</record_update>
