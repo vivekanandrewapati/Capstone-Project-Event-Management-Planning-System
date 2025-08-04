@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="DELETE">
+        <category display_value="" name="x_1790139_event_ma_event_record">x_1790139_event_ma_event_record</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>EVT</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 07:02:10</sys_created_on>
+        <sys_id>69e0cd1bc3cb26104a2dfc0d05013128</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EVT</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sys_number_69e0cd1bc3cb26104a2dfc0d05013128</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 07:02:10</sys_updated_on>
+    </sys_number>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</application>
+        <file_path/>
+        <instance_id>b79a1c463b375610872712c5e4e45af5</instance_id>
+        <instance_name>dev296851</instance_name>
+        <name>sys_number_69e0cd1bc3cb26104a2dfc0d05013128</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number"><sys_number action="INSERT_OR_UPDATE"><category display_value="" name="x_1790139_event_ma_event_record">x_1790139_event_ma_event_record</category><maximum_digits>7</maximum_digits><number>1000</number><prefix>EVT</prefix><sys_class_name>sys_number</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-04 07:02:10</sys_created_on><sys_id>69e0cd1bc3cb26104a2dfc0d05013128</sys_id><sys_mod_count>0</sys_mod_count><sys_name>EVT</sys_name><sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package><sys_policy/><sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope><sys_update_name>sys_number_69e0cd1bc3cb26104a2dfc0d05013128</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-04 07:02:10</sys_updated_on></sys_number></record_update>]]></payload>
+        <payload_hash>672649967</payload_hash>
+        <record_name>EVT</record_name>
+        <reverted_from/>
+        <source>693bb8dfc38b26104a2dfc0d05013101</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 07:02:10</sys_created_on>
+        <sys_id>ade0cd1bc3cb26104a2dfc0d0501313c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19873e342fe0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 07:02:10</sys_updated_on>
+        <type>Number</type>
+        <update_guid>a1e0cd1bfacb2610e7f6b834c91f7d3c</update_guid>
+        <update_guid_history>a1e0cd1bfacb2610e7f6b834c91f7d3c:672649967</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 07:04:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_number">sys_number</sys_db_object>
+        <sys_id>0378d369e71e47958acdc8906c94db61</sys_id>
+        <sys_metadata>69e0cd1bc3cb26104a2dfc0d05013128</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EVT</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_parent display_value="">b8dcb0d3c3cb26104a2dfc0d0501316e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_scope_delete display_value="">b332b3d34d1b4274b581efe07a9cb369</sys_scope_delete>
+        <sys_update_name>sys_number_69e0cd1bc3cb26104a2dfc0d05013128</sys_update_name>
+        <sys_update_version display_value="sys_number_69e0cd1bc3cb26104a2dfc0d05013128">ade0cd1bc3cb26104a2dfc0d0501313c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 07:04:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

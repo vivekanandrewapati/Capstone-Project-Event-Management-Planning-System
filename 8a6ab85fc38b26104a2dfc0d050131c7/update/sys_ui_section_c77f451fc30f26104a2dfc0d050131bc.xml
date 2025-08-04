@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Venue Details" section_id="c77f451fc30f26104a2dfc0d050131bc" sys_domain="global" table="x_1790139_event_ma_venue" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:08:43</sys_created_on>
+            <sys_id>e420915fc30f26104a2dfc0d05013193</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Venue Details" display_value="Venue Details" name="x_1790139_event_ma_venue" sys_domain="global" view="Default view">c77f451fc30f26104a2dfc0d050131bc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:08:43</sys_created_on>
+            <sys_id>6c20915fc30f26104a2dfc0d05013193</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Venue Details" display_value="Venue Details" name="x_1790139_event_ma_venue" sys_domain="global" view="Default view">c77f451fc30f26104a2dfc0d050131bc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_location</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:08:43</sys_created_on>
+            <sys_id>e020915fc30f26104a2dfc0d05013194</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Venue Details" display_value="Venue Details" name="x_1790139_event_ma_venue" sys_domain="global" view="Default view">c77f451fc30f26104a2dfc0d050131bc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_contact_person</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:08:43</sys_created_on>
+            <sys_id>6820915fc30f26104a2dfc0d05013194</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Venue Details" display_value="Venue Details" name="x_1790139_event_ma_venue" sys_domain="global" view="Default view">c77f451fc30f26104a2dfc0d050131bc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:08:43</sys_created_on>
+            <sys_id>ec20915fc30f26104a2dfc0d05013194</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Venue Details" display_value="Venue Details" name="x_1790139_event_ma_venue" sys_domain="global" view="Default view">c77f451fc30f26104a2dfc0d050131bc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:43</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:08:43</sys_created_on>
+            <sys_id>6420915fc30f26104a2dfc0d05013195</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Venue Details" display_value="Venue Details" name="x_1790139_event_ma_venue" sys_domain="global" view="Default view">c77f451fc30f26104a2dfc0d050131bc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_venue_name</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:08:43</sys_created_on>
+            <sys_id>e820915fc30f26104a2dfc0d05013195</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Venue Details" display_value="Venue Details" name="x_1790139_event_ma_venue" sys_domain="global" view="Default view">c77f451fc30f26104a2dfc0d050131bc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_capacity</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:08:43</sys_created_on>
+            <sys_id>6020915fc30f26104a2dfc0d05013196</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Venue Details" display_value="Venue Details" name="x_1790139_event_ma_venue" sys_domain="global" view="Default view">c77f451fc30f26104a2dfc0d050131bc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_contact_number</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:08:43</sys_created_on>
+            <sys_id>e420915fc30f26104a2dfc0d05013196</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Venue Details" display_value="Venue Details" name="x_1790139_event_ma_venue" sys_domain="global" view="Default view">c77f451fc30f26104a2dfc0d050131bc</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Venue Details</caption>
+            <header>false</header>
+            <name>x_1790139_event_ma_venue</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 08:05:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c77f451fc30f26104a2dfc0d050131bc</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>x_1790139_event_ma_venue</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+            <sys_update_name>sys_ui_section_c77f451fc30f26104a2dfc0d050131bc</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 08:08:42</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="" section_id="09ac051bc30f26104a2dfc0d0501312f" sys_domain="global" table="x_1790139_event_ma_budget" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 07:53:27</sys_created_on>
+            <sys_id>8dac851bc30f26104a2dfc0d0501310a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1790139_event_ma_budget" sys_domain="global" view="Default view">09ac051bc30f26104a2dfc0d0501312f</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 07:53:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption/>
+            <header>false</header>
+            <name>x_1790139_event_ma_budget</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-04 07:53:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>09ac051bc30f26104a2dfc0d0501312f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1790139_event_ma_budget</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+            <sys_update_name>sys_ui_section_09ac051bc30f26104a2dfc0d0501312f</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-04 07:53:27</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</application>
+        <file_path/>
+        <instance_id>b79a1c463b375610872712c5e4e45af5</instance_id>
+        <instance_name>dev296851</instance_name>
+        <name>sys_ui_section_09ac051bc30f26104a2dfc0d0501312f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="" section_id="09ac051bc30f26104a2dfc0d0501312f" sys_domain="global" table="x_1790139_event_ma_budget" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>number</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-04 07:53:27</sys_created_on><sys_id>8dac851bc30f26104a2dfc0d0501310a</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="NULL" display_value="" name="x_1790139_event_ma_budget" sys_domain="global" view="Default view">09ac051bc30f26104a2dfc0d0501312f</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-04 07:53:27</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption/><header>false</header><name>x_1790139_event_ma_budget</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-04 07:53:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>09ac051bc30f26104a2dfc0d0501312f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1790139_event_ma_budget</sys_name><sys_overrides/><sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package><sys_policy/><sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope><sys_update_name>sys_ui_section_09ac051bc30f26104a2dfc0d0501312f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-04 07:53:27</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>1498250333</payload_hash>
+        <record_name>Budget</record_name>
+        <reverted_from/>
+        <source>693bb8dfc38b26104a2dfc0d05013101</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 07:53:27</sys_created_on>
+        <sys_id>49ac851bc30f26104a2dfc0d0501310c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198741238840000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 07:53:27</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>01ac851b550f2610b0c1dbfbaa28c90c</update_guid>
+        <update_guid_history>01ac851b550f2610b0c1dbfbaa28c90c:1498250333,85ac851b4b0f261041e307c17ab3ef0a:1550340517</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 07:53:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>327535bbb6c945148d18b205f058b1b9</sys_id>
+        <sys_metadata>09ac051bc30f26104a2dfc0d0501312f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1790139_event_ma_budget</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_parent display_value="">fb5ccdd7c30f26104a2dfc0d05013157</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_scope_delete display_value="">b332b3d34d1b4274b581efe07a9cb369</sys_scope_delete>
+        <sys_update_name>sys_ui_section_09ac051bc30f26104a2dfc0d0501312f</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_09ac051bc30f26104a2dfc0d0501312f">49ac851bc30f26104a2dfc0d0501310c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 07:53:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
