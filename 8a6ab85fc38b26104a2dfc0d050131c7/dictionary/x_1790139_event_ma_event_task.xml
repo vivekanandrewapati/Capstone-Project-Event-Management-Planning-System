@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="b4f60153c30f26104a2dfc0d050131ea" extends="task" label="Event Task " max_length="40" name="x_1790139_event_ma_event_task" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="not started" label="Status" max_length="40" name="x_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New" sequence="0" value="new"/>
+                <element inactive_on_update="false" label="Not Started" sequence="1" value="not started"/>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
+                <element inactive_on_update="false" label="In Progress" sequence="2" value="in progress"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Assigned To" max_length="32" name="x_assigned_to" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Due Date" max_length="40" name="x_due_date" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Event Id" max_length="32" name="x_event_id" reference="x_1790139_event_ma_event_record" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Task Name" max_length="40" name="x_task_name" type="string"/>
+    </element>
+</database>

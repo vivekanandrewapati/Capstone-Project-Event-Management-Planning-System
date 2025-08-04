@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="a9dd419bc30f26104a2dfc0d05013116" extends="task" label="Attendee" max_length="40" name="x_1790139_event_ma_attendee" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Contact Number" max_length="40" name="x_contact_number" type="string"/>
+        <element attributes="encode_utf8=false" label="Event Id" max_length="32" name="x_event_id" reference="x_1790139_event_ma_event_record" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" max_length="40" name="x_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="First Name" max_length="40" name="x_first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Name" max_length="40" name="x_last_name" type="string"/>
+    </element>
+</database>
