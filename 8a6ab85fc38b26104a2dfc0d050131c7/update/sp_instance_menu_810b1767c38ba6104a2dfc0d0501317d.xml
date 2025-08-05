@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_menu">
+    <sp_instance_menu action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column/>
+        <sp_widget display_value="Header Menu">5ef595c1cb12020000f8d856634c9c6e</sp_widget>
+        <sys_class_name>sp_instance_menu</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 12:54:21</sys_created_on>
+        <sys_id>810b1767c38ba6104a2dfc0d0501317d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EMP Main Menu</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sp_instance_menu_810b1767c38ba6104a2dfc0d0501317d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 12:54:21</sys_updated_on>
+        <title>EMP Main Menu</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_menu>
+    <sys_translated_text action="delete_multiple" query="documentkey=810b1767c38ba6104a2dfc0d0501317d"/>
+</record_update>

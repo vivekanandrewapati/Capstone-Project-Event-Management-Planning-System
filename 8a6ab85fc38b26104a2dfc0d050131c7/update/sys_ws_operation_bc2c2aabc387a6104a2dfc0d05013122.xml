@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri>/api/x_1790139_event_ma/task_api/create</default_operation_uri>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Create Task</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+   
+
+	var requestBody = request.body.data;
+
+	if(!requestBody.x_event_id || !requestBody.x_task_name || !requestBody.x_assigned_to || !requestBody.x_due_date) {
+		response.setStatus(400);
+		return { error: 'Missing required fields' };
+	}
+
+	var _taskGR = new GlideRecord('x_1790139_event_ma_event_task');
+	_taskGR.initialize();
+
+	var _eventGR = new GlideRecord('x_1790139_event_ma_event_record');
+	if(_eventGR.get(requestBody.x_event_id)) {
+		var _userGR = new GlideRecord('sys_user');
+		_userGR.addQuery('user_name', requestBody.x_assigned_to);
+		_userGR.query();
+		if(_userGR.next()) {
+			_taskGR.x_event_id = _eventGR.getUniqueValue();
+			_taskGR.x_task_name = requestBody.x_task_name;
+			_taskGR.x_due_date = requestBody.x_due_date;
+			_taskGR.x_assigned_to = _userGR.getUniqueValue();
+
+			var sysId = _taskGR.insert();
+
+			if(!sysId) {
+				response.setStatus(500);
+				return { error: 'Failed to create task record' };
+			}
+
+			response.setStatus(201);
+			return {
+				message: 'Task record created successfully',
+				sys_id: sysId
+			};
+		} else {
+			response.setStatus(400);
+			return { error: 'Invalid Assigned Id' };
+		}
+		
+	} else {
+		response.setStatus(400);
+		return { error: 'Invalid Event Id' };
+	}
+ 	
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1790139_event_ma/v1/task_api/create</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/create</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 09:30:12</sys_created_on>
+        <sys_id>bc2c2aabc387a6104a2dfc0d05013122</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Task</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sys_ws_operation_bc2c2aabc387a6104a2dfc0d05013122</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 09:30:12</sys_updated_on>
+        <web_service_definition display_value="Task API">0efb66abc387a6104a2dfc0d05013100</web_service_definition>
+        <web_service_version display_value="v1">230c6eebc387a6104a2dfc0d05013164</web_service_version>
+    </sys_ws_operation>
+</record_update>

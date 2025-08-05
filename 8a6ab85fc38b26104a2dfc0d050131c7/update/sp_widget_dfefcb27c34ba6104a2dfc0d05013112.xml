@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope) {
+  var c = this;
+  c.attendee = {};
+
+  c.registerAttendee = function() {
+    c.success = '';
+    c.error = '';
+
+    c.server.get({ attendee: c.attendee }).then(function(response) {
+      if (response.data.success) {
+        c.success = response.data.success;
+        c.attendee = {};
+      } else {
+        c.error = response.data.error;
+      }
+    });
+  };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>event_registration_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Event Registration - Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  data.success = '';
+  data.error = '';
+
+  if (input && input.attendee) {
+    var a = input.attendee;
+    if (a.x_event_id && a.x_first_name && a.x_last_name && a.x_email && a.x_contact_number) {
+      var gr = new GlideRecord('x_1790139_event_ma_attendee');
+      gr.initialize();
+      gr.setValue('x_event_id', a.x_event_id);
+      gr.setValue('x_first_name', a.x_first_name);
+      gr.setValue('x_last_name', a.x_last_name);
+      gr.setValue('x_email', a.x_email);
+      gr.setValue('x_contact_number', a.x_contact_number);
+      gr.insert();
+      data.success = 'Attendee registered successfully.';
+    } else {
+      data.error = 'Please fill in all fields.';
+    }
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 12:06:38</sys_created_on>
+        <sys_id>dfefcb27c34ba6104a2dfc0d05013112</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Event Registration - Widget</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sp_widget_dfefcb27c34ba6104a2dfc0d05013112</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 12:06:38</sys_updated_on>
+        <template><![CDATA[<div class="container mt-4">
+  <h3 class="mb-4">Attendee Registration</h3>
+
+  <div class="form-group">
+    <label>Event ID</label>
+    <input class="form-control" type="text" ng-model="c.attendee.x_event_id" />
+  </div>
+
+  <div class="form-group">
+    <label>First Name</label>
+    <input class="form-control" type="text" ng-model="c.attendee.x_first_name" />
+  </div>
+
+  <div class="form-group">
+    <label>Last Name</label>
+    <input class="form-control" type="text" ng-model="c.attendee.x_last_name" />
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input class="form-control" type="email" ng-model="c.attendee.x_email" />
+  </div>
+
+  <div class="form-group">
+    <label>Contact Number</label>
+    <input class="form-control" type="text" ng-model="c.attendee.x_contact_number" />
+  </div>
+
+  <button class="btn btn-primary mt-3" ng-click="c.registerAttendee()">Register</button>
+
+  <div class="alert alert-success mt-3" ng-if="c.success">
+    {{ c.success }}
+  </div>
+  <div class="alert alert-danger mt-3" ng-if="c.error">
+    {{ c.error }}
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

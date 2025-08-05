@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $timeout) {
+  var c = this;
+  c.success = null;
+  c.error = null;
+
+  c.view = function(id) {
+    alert("View full feedback not implemented yet.\nYou clicked ID: " + id);
+  };
+
+  c.delete = function(id) {
+    if (confirm("Are you sure you want to delete this feedback?")) {
+      c.server.get({ action: 'delete', id: id }).then(function(response) {
+        c.success = response.data.success;
+        c.error = response.data.error;
+        c.reload();
+      });
+    }
+  };
+
+  c.reload = function() {
+    $timeout(function() {
+      c.server.get().then(function(response) {
+        $scope.data = response.data;
+      });
+    }, 400);
+  };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>emp_recieved_feedbacks_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>EMP Recieved Feedbacks - Widget</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  data.feedbacks = [];
+  data.success = '';
+  data.error = '';
+
+  if (input && input.action && input.id) {
+    var fb = new GlideRecord('x_1790139_event_ma_feedback');
+    if (fb.get(input.id)) {
+      if (input.action === 'delete') {
+        fb.deleteRecord();
+        data.success = 'Feedback deleted successfully.';
+      }
+    } else {
+      data.error = 'Feedback not found.';
+    }
+  }
+
+  var gr = new GlideRecord('x_1790139_event_ma_feedback');
+  gr.orderByDesc('sys_created_on');
+  gr.query();
+  while (gr.next()) {
+    data.feedbacks.push({
+      sys_id: gr.getUniqueValue(),
+      number: gr.getValue('number'),
+      event: gr.getDisplayValue('x_event_id'),
+      attendee: gr.getDisplayValue('x_attendee_id'),
+      rating: gr.getValue('x_rating'),
+      comments: gr.getValue('x_comments')
+    });
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 11:50:52</sys_created_on>
+        <sys_id>a13c4ba3c34ba6104a2dfc0d05013160</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EMP Recieved Feedbacks - Widget</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sp_widget_a13c4ba3c34ba6104a2dfc0d05013160</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 11:50:52</sys_updated_on>
+        <template><![CDATA[<h5 class="mb-3 text-primary">
+  <i class="fa fa-comments"></i> Submitted Feedback
+</h5>
+
+<div ng-if="c.success" class="alert alert-success py-2 px-3 mb-2">{{ c.success }}</div>
+<div ng-if="c.error" class="alert alert-danger py-2 px-3 mb-2">{{ c.error }}</div>
+
+<div ng-if="data.feedbacks.length === 0" class="alert alert-info p-2">
+  No feedback submitted yet.
+</div>
+
+<div ng-repeat="fb in data.feedbacks" class="card mb-2 shadow-sm">
+  <div class="card-body py-2 px-3">
+    <div class="row">
+      <div class="col-md-6">
+        <strong>ID:</strong> {{ fb.number }}<br>
+        <strong>Rating:</strong> {{ fb.rating }} ⭐<br>
+        <strong>Event:</strong> {{ fb.event }}
+      </div>
+      <div class="col-md-6">
+        <strong>Attendee:</strong> {{ fb.attendee }}<br>
+        <strong>Comment:</strong>
+        <span class="d-inline-block text-truncate" style="max-width: 200px;" title="{{ fb.comments }}">
+          {{ fb.comments }}
+        </span>
+      </div>
+    </div>
+    <div class="mt-3 text-end">
+      <button class="btn btn-outline-primary btn-sm me-2" ng-click="c.view(fb.sys_id)">
+        <i class="fa fa-eye"></i> View
+      </button>
+      <button class="btn btn-outline-danger btn-sm" ng-click="c.delete(fb.sys_id)">
+        <i class="fa fa-trash"></i> Delete
+      </button>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

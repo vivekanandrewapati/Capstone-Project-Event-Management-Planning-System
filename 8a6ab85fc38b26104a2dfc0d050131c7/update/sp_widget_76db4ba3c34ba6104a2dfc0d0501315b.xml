@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $timeout) {
+  var c = this;
+  c.success = null;
+  c.error = null;
+
+  c.approve = function(id) {
+    c.server.get({ action: 'approve', id: id }).then(function(response) {
+      c.success = response.data.success;
+      c.error = response.data.error;
+      c.reload();
+    });
+  };
+
+  c.deny = function(id) {
+    c.server.get({ action: 'deny', id: id }).then(function(response) {
+      c.success = response.data.success;
+      c.error = response.data.error;
+      c.reload();
+    });
+  };
+
+  c.reload = function() {
+    $timeout(function() {
+      c.server.get().then(function(response) {
+        $scope.data = response.data;
+      });
+    }, 400);
+  };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>emp_venue_request_widget_</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>EMP Venue Request - Widget </name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  data.success = '';
+  data.error = '';
+  data.bookings = [];
+
+  if (input && input.action && input.id) {
+    var vr = new GlideRecord('x_1790139_event_ma_venue');
+    if (vr.get(input.id)) {
+      if (input.action === 'approve') {
+        vr.setValue('x_status', 'approved');
+        vr.update();
+        data.success = 'Venue approved.';
+      } else if (input.action === 'deny') {
+        vr.setValue('x_status', 'denied');
+        vr.update();
+        data.success = 'Venue denied.';
+      }
+    } else {
+      data.error = 'Booking not found.';
+    }
+  }
+
+  var gr = new GlideRecord('x_1790139_event_ma_venue');
+  gr.orderByDesc('sys_created_on');
+  gr.query();
+  while (gr.next()) {
+    data.bookings.push({
+      sys_id: gr.getUniqueValue(),
+      number: gr.getValue('number'),
+      name: gr.getValue('x_venue_name'),
+      location: gr.getValue('x_location'),
+      capacity: gr.getValue('x_capacity'),
+      contact_person: gr.getValue('x_contact_person'),
+      contact_number: gr.getValue('x_contact_number'),
+      event: gr.getDisplayValue('x_event'),
+      status: gr.getValue('x_status')
+    });
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 11:49:08</sys_created_on>
+        <sys_id>76db4ba3c34ba6104a2dfc0d0501315b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EMP Venue Request - Widget </sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sp_widget_76db4ba3c34ba6104a2dfc0d0501315b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 11:49:08</sys_updated_on>
+        <template><![CDATA[<h5 class="mb-3">]]>📍<![CDATA[ Venue Booking Requests</h5>
+
+<div ng-if="c.success" class="alert alert-success py-1 px-2 mb-2">{{ c.success }}</div>
+<div ng-if="c.error" class="alert alert-danger py-1 px-2 mb-2">{{ c.error }}</div>
+
+<div ng-if="data.bookings.length === 0" class="text-muted small">No venue bookings available.</div>
+
+<div ng-repeat="v in data.bookings" class="card p-3 mb-3 shadow-sm">
+  <div class="row">
+    <div class="col-md-6">
+      <strong>ID:</strong> {{ v.number }}<br/>
+      <strong>Venue:</strong> {{ v.name }}<br/>
+      <strong>Location:</strong> {{ v.location }}<br/>
+      <strong>Capacity:</strong> {{ v.capacity }}
+    </div>
+    <div class="col-md-6">
+      <strong>Contact:</strong> {{ v.contact_person }}<br/>
+      <strong>Phone:</strong> {{ v.contact_number }}<br/>
+      <strong>Event:</strong> {{ v.event }}<br/>
+      <strong>Status:</strong>
+      <span class="badge" ng-class="{
+        'bg-warning': v.status === 'pending',
+        'bg-success': v.status === 'approved',
+        'bg-danger': v.status === 'denied'
+      }">{{ v.status | uppercase }}</span>
+    </div>
+  </div>
+
+  <div class="mt-3" ng-if="v.status === 'pending'">
+    <button class="btn btn-success btn-sm me-2" ng-click="c.approve(v.sys_id)">✔ Approve</button>
+    <button class="btn btn-danger btn-sm" ng-click="c.deny(v.sys_id)">✘ Deny</button>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>
