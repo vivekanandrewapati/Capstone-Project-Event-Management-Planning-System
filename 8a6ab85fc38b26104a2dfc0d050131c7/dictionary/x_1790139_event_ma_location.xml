@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3d7e252fc343a6104a2dfc0d05013193" label="Location " max_length="40" name="x_1790139_event_ma_location" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Available" max_length="40" name="x_available" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Location" max_length="40" name="x_location" type="string"/>
+    </element>
+</database>

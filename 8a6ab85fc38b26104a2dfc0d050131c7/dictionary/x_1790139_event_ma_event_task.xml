@@ -7,9 +7,11 @@
                 <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
                 <element inactive_on_update="false" label="In Progress" sequence="2" value="in progress"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
+                <element inactive_on_update="false" label="Reminded" sequence="5" value="reminded"/>
             </choice>
         </element>
         <element attributes="encode_utf8=false" label="Assigned To" max_length="32" name="x_assigned_to" reference="sys_user" type="reference"/>
+        <element label="Is Completed" max_length="40" name="x_is_complete" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Due Date" max_length="40" name="x_due_date" type="glide_date_time"/>
         <element attributes="encode_utf8=false" label="Event Id" max_length="32" name="x_event_id" reference="x_1790139_event_ma_event_record" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Task Name" max_length="40" name="x_task_name" type="string"/>

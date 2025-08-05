@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1790139_event_ma.RegisterAttendeeUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>RegisterAttendeeUtils</name>
+        <script><![CDATA[var RegisterAttendeeUtils = Class.create();
+RegisterAttendeeUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	register: function() {
+		var firstName = this.getParameter('sysparm_first_name');
+		var lastName = this.getParameter('sysparm_last_name');
+		var email = this.getParameter('sysparm_email');
+		var contact = this.getParameter('sysparm_contact');
+		var event_id = this.getParameter('sysparm_event_id');
+
+		var gr = new GlideRecord('x_1790139_event_ma_attendee');
+		gr.initialize();
+		gr.setValue('x_first_name', firstName);
+		gr.setValue('x_last_name', lastName);
+		gr.setValue('x_email', email);
+		gr.setValue('x_contact_number', contact);
+		gr.setValue('x_event_id', event_id);
+		gr.insert();
+
+		return "success";
+	},
+    type: 'RegisterAttendeeUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 06:31:07</sys_created_on>
+        <sys_id>28234ae7c3c3a6104a2dfc0d05013180</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>RegisterAttendeeUtils</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sys_script_include_28234ae7c3c3a6104a2dfc0d05013180</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 06:31:07</sys_updated_on>
+    </sys_script_include>
+</record_update>

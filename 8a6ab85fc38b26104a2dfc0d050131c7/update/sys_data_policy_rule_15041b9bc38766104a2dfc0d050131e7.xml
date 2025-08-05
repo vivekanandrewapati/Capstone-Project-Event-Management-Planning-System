@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>true</disabled>
+        <field>x_event_date</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-04 17:45:19</sys_created_on>
+        <sys_data_policy display_value="Make event_date read-only for non-admins">e7cacfdfc34766104a2dfc0d050131a4</sys_data_policy>
+        <sys_id>15041b9bc38766104a2dfc0d050131e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_event_date</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sys_data_policy_rule_15041b9bc38766104a2dfc0d050131e7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 17:45:19</sys_updated_on>
+        <table>x_1790139_event_ma_event_record</table>
+    </sys_data_policy_rule>
+</record_update>

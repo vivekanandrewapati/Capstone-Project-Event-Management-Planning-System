@@ -10,6 +10,7 @@
                 <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
                 <element inactive_on_update="false" label="Scheduled" sequence="2" value="scheduled"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
+                <element inactive_on_update="false" label="Confirmed" sequence="5" value="Confirmed"/>
                 <element inactive_on_update="false" label="New" sequence="0" value="new"/>
             </choice>
         </element>

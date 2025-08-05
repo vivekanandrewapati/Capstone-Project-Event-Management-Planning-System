@@ -11,5 +11,11 @@
         </element>
         <element attributes="edge_encryption_enabled=true" label="Comments" max_length="40" name="x_comments" type="string"/>
         <element attributes="encode_utf8=false" label="Event Id" max_length="32" name="x_event_id" reference="x_1790139_event_ma_event_record" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type" max_length="40" name="x_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Negative" sequence="0" value="negative"/>
+                <element inactive_on_update="false" label="Positive" sequence="1" value="positive"/>
+            </choice>
+        </element>
     </element>
 </database>
