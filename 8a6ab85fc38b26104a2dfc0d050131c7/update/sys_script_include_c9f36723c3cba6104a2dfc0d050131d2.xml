@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1790139_event_ma.GRandSJUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GRandSJUtils</name>
+        <script><![CDATA[var GRandSJUtils = Class.create();
+GRandSJUtils.prototype = {
+    initialize: function(eventId = null) {
+        this.eventRecord = new GlideRecord('x_1790139_eve_man_event_record');
+        this.attendee = new GlideRecord('x_1790139_eve_man_attendee');
+        this.budget = new GlideRecord('x_1790139_eve_man_budget');
+        this.eventTask = new GlideRecord('x_1790139_eve_man_event_task');
+        this.feedback = new GlideRecord('x_1790139_eve_man_feedback');
+        this.schedule = new GlideRecord('x_1790139_eve_man_schedule');
+        this.vendor = new GlideRecord('x_1790139_eve_man_vendor');
+        this.venue = new GlideRecord('x_1790139_eve_man_venue');
+        this.eventId = eventId;
+    },
+
+    //Script to fetch all tasks for a specific event
+
+    fetchTasksByEventID: function() {
+		gs.info('Inside fetchTasksByEventID function');
+        this.eventTask.addQuery('x_event_id', this.eventId);
+        this.eventTask.query();
+        return this.eventTask;
+    },
+
+    //Script to update the status of overdue tasks to "Cancelled"
+
+    updateStatusToCancelled: function() {
+		gs.info('Inside updateStatusToCancelled function');
+        this.eventTask.addQuery('x_status', 'overdue');
+        this.eventTask.query();
+        while (this.eventTask.next()) {
+            this.eventTask.setValue('x_status', 'cancelled');
+            this.eventTask.update();
+        }
+
+
+    },
+
+    //Script to fetch all attendees registered for a specific event
+
+    fetchAttendeesByEventId: function() {
+        this.attendee.addQuery('x_event_id', this.eventId);
+		gs.info('Inside fetchAttendeesByEventId function');
+        this.attendee.query();
+        return this.attendee;
+    },
+
+    //Script to fetch all vendors associated with a specific event
+
+    fetchVendorsByEventId: function() {
+        this.vendor.addQuery('x_event_id', this.eventId);
+        gs.info('Inside fetchVendorsByEventId function');
+        this.vendor.query();
+        return this.vendor;
+    },
+
+    //Script to fetch the budget details for a specific event
+
+    fetchBudgetDetailsForEvent: function() {
+
+        this.budget.addQuery('x_event_id', this.eventId);
+        this.budget.query();
+        gs.info('Inside fetchBudgetDetailsForEvent function');
+        return this.budget;
+    },
+
+    //Script to fetch the feedback received for a specific event
+
+    fetchFeedbackByEventId: function() {
+        this.feedback.addQuery('x_event_id', this.eventId);
+        this.feedback.query();
+        gs.info('Inside fetchFeedbackByEventId function');
+        return this.feedback;
+    },
+
+    //Script to fetch the schedule details for a specific event
+    fetchScheduleDetailsByEventId: function() {
+        this.schedule.addQuery('x_event_id', this.eventId);
+		gs.info('Inside fetchScheduleDetailsByEventId function');
+        this.schedule.query();
+        return this.schedule;
+    },
+
+
+
+
+    type: 'GRandSJUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 13:34:42</sys_created_on>
+        <sys_id>c9f36723c3cba6104a2dfc0d050131d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GRandSJUtils</sys_name>
+        <sys_package display_value="Event Management &amp;amp; Planning System" source="x_1790139_event_ma">8a6ab85fc38b26104a2dfc0d050131c7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Event Management &amp;amp; Planning System">8a6ab85fc38b26104a2dfc0d050131c7</sys_scope>
+        <sys_update_name>sys_script_include_c9f36723c3cba6104a2dfc0d050131d2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-05 13:34:42</sys_updated_on>
+    </sys_script_include>
+</record_update>
